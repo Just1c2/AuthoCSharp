@@ -18,15 +18,15 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("All", policy =>
         policy.RequireAssertion(context =>
-            context.User.Identity.Name == "admin@mvc.web"));
+            context.User.Identity.Name == "all@gmail.web"));
 
     options.AddPolicy("AddAndView", policy =>
     policy.RequireAssertion(context =>
-        context.User.Identity.Name == "add@mvc.web"));
+        context.User.Identity.Name == "add@gmail.web"));
 
     options.AddPolicy("ViewOnly", policy =>
     policy.RequireAssertion(context =>
-        context.User.Identity.Name == "view@mvc.web"));
+        context.User.Identity.Name == "view@gmail.web"));
 });
 
 var app = builder.Build();
